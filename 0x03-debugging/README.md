@@ -1,0 +1,3 @@
+###0x03. C - Debugging###
+
+Debugging in C programming refers to the process of identifying and resolving errors, bugs, and issues within a program's source code. It involves using various tools, techniques, and strategies to locate and correct programming mistakes that can lead to incorrect behavior or crashes. Debugging often includes tasks like analyzing error messages, using print statements to trace program flow, inspecting variable values, and utilizing specialized debugging tools like debuggers and memory analyzers. Effective debugging is crucial for ensuring the correctness and reliability of software, improving code quality, and streamlining the development process by efficiently identifying and rectifying issues that might arise during program execution.
