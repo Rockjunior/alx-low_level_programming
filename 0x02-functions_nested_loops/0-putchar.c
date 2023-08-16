@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * main - Pri9nt _putchar then new line
  *
