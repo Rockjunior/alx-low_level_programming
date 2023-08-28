@@ -1,26 +1,24 @@
 #include "main.h"
-#define NULL 0
-/**
- * _strpbrk-Searches a string for any set of byte
- * @s:string to search, also first occurence in the string
- * * @accept: target matches
- * * Return: pointer to index of string at first occurence and to the byte
- */
 
+/**
+ * _strpbrk - fills memory with a constant byte.
+ * @s: first bytes of the memory
+ * @accept: constant byte b
+ * Return: pointer to the resulting string dests
+ */
 char *_strpbrk(char *s, char *accept)
 {
-  int a = 0, c;
-  while (s[a] != '\0')
-  {
-    for (c = 0; accept[c] != '\0'; c++)
-    {
-      if (s[a] == accept[c])
-      {
-        s = &s[a];
-        return (s)
-      }
-    }
-    a++;
-  }
-  return (NULL);
+	int i, j;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		for (j = 0; accept[j] != '\0'; j++)
+		{
+			if (s[i] == accept[j])
+			{
+				return (s + i);
+			}
+		}
+	}
+	return ('\0');
 }
