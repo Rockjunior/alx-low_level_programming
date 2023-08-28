@@ -1,32 +1,28 @@
 #include "main.h"
+
 /**
- * _strstr=locates a substring and pointer
- * @haystack:the long string to search
- * @needle:the first occurence of the substracting
- * Return:a pointer beg of substring
- * or
- * @NULL if its not found.
- */
+* _strstr - Entry point
+* @haystack: input
+* @needle: input
+* Return: Always 0 (Success)
+*/
+
 char *_strstr(char *haystack, char *needle)
 {
-  unsigned int k = 0, l = 0;
+	for (; *haystack != '\0'; haystack++)
+	{
+		char *l = haystack;
+		char *p = needle;
 
-  while(haystack[k])
-  {
-    while (needle[l] && (haystack[k] == needle[0]))
-    {
-      if (haystack[k + l] == needle[l])
-        l++
-      else
-        break;
-    }
-    if (needle[l])
-    {
-      k++;
-      l = 0;
-    }
-    else
-      return (haystack + k);
-  }
-  return (0);
+		while (*l == *p && *p != '\0')
+		{
+			l++;
+			p++;
+		}
+
+		if (*p == '\0')
+			return (haystack);
+	}
+
+	return (0);
 }
