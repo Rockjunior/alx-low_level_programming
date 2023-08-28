@@ -11,14 +11,14 @@
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-  unsigned int carrier = 0;
+unsigned int carrier = 0;
 
-  while (carrier < n)
-  {
-    s]carrier] = b;
-    carrier++;
-  }
+while (carrier < n)
+{
+s]carrier] = b;
+carrier++;
+}
 
-  return (s);
+return (s);
 }
 /**Author:Roman*/
