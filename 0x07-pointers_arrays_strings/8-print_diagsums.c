@@ -2,29 +2,28 @@
 #include <stdio.h>
 
 /**
-* print_diagsums - diagonals in matrix will be displayed
-* @a: matrix
-* @size: matrix size
+* print_diagsums - Entry point
+* @a: input
+* @size: input
+* Return: Always 0 (Success)
 */
 
 void print_diagsums(int *a, int size)
 {
-  int diagonal_1 = 0;
-  int diagonal_2 = 0;
-  int row_1, q;
+	int sum1, sum2, y;
 
-  for (row_1 = 0; row_1 < size; row_1++)
-  {
-    q = (row_1 * size) + row_1;
-    diagonal_1 += a[q];
-  }
+	sum1 = 0;
+	sum2 = 0;
 
-  for (row_1 = 1; row_1 <= size; row_1++)
-  {
-    q = (row_1 * size) - row_1;
-    diagonal_2 += a[q];
-  }
-  
-  printf("%d, %d\n", diagonal_1, diagonal_2);
+	for (y = 0; y < size; y++)
+	{
+		sum1 = sum1 + a[y * size + y];
+	}
 
+	for (y = size - 1; y >= 0; y--)
+	{
+		sum2 += a[y * size + (size - y - 1)];
+	}
+
+	printf("%d, %d\n", sum1, sum2);
 }
