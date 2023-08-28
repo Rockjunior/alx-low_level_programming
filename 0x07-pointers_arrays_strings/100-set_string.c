@@ -1,12 +1,12 @@
 #include "main.h"
-/**
- * set_stirng-set value of pointer to a char
- * @s:variable of type pointer in the system
- * @to:char
- * Return:void
- */
 
+/**
+ * set_string - fills memory with a constant byte.
+ * @s: first bytes of the memory
+ * @to: first bytes of the memory
+ * Return: -
+ */
 void set_string(char **s, char *to)
 {
-  *s = to;
+	*s = to;
 }
