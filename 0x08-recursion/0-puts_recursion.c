@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
 * _puts_recursion - prints a string followed by a new line
 *@s:character to be printed
@@ -17,7 +18,7 @@ void _puts_recursion(char *s)
 }
 int main()
 {
-  char str[] = "Recursive Functions";
+  char str[] = "Recursive,Functions";
   _puts_recursion(str);
   return (0);
 }
