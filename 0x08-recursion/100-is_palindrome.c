@@ -1,35 +1,48 @@
+#include "main.h"
+
 /**
- * Create numbers which can be similar even in reverse
- * Get user number
- * hold the No temporarily
- * Reverse it
- * compare it in reverse
- * If both are similar print them
-*/
-#include <stdio.h>
-
-int main()
+ * _strlen_recursion2 - fills memory with a constant byte.
+ * @s: first bytes of the memory
+ * Return: -
+ */
+int _strlen_recursion2(char *s)
 {
-    int n,r,sum = 0,temp;
-    
-    printf("Enter the number:");
-    scanf("%d",&n);
-    temp = n;
-    while (n > 0)
+    if (*s == '\0')
     {
-        r = n%10;
-        sum = (sum * 10) + r;
-        n = n/10;
+        return (0);
     }
+    return (_strlen_recursion2(s + 1) + 1);
+}
 
-    if (temp == sum)
+/**
+ * comp_rec - fills memory with a constant byte.
+ * @s: first bytes of the memory
+ * @ln: first bytes of the memory
+ * @i: first bytes of the memory
+ * Return: -
+ */
+int comp_rec(char *s, int ln, int i)
+{
+    if (i >= ln)
+    {
+        return (1);
+    }
+    if (*(s + i) != *(s + (ln - 1)))
+    {
+        return (0);
+    }
+    return (comp_rec(s, ln - 1, i + 1));
+}
 
-    printf("Palindrome number!");
+/**
+ * is_palindrome - fills memory with a constant byte.
+ * @s: first bytes of the memory
+ * Return: -
+ */
+int is_palindrome(char *s)
+{
+    int ln = _strlen_recursion2(s);
+    int i = 0;
 
-    else
-    
-    printf("Oops not Palindreome number!");
-
-    return 0;
-    
+    return (comp_rec(s, ln, i));
 }
