@@ -4,7 +4,6 @@
 * @s: measuring of the string
 *Return: finding the string length
 */
-
 int _strlen_recursion(char *s)
 {
 	int lengthInView = 0;
