@@ -5,14 +5,14 @@
  * @s: first bytes of the memory
  * Return: -
  */
-void _puts_recursion(char *c)
+void _puts_recursion(char *s)
 {
-	if (*c == '\0')
+	if (*s == '\0')
 	{
 		_putchar('\n');
 		return;
 	}
-	_putchar(*c);
-	c++;
-	_puts_recursion(c);
+	_putchar(*s);
+	s++;
+	_puts_recursion(s);
 }
