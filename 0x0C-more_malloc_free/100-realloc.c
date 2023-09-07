@@ -11,6 +11,7 @@ void *_memcpy(void *dest, const void *src, unsigned int n);
 * @new_size: The size in bytes for the new memory block.
 *
 * Return: A pointer to the new memory block, or NULL if allocation fails.
+* Author - </Roman>
 */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
